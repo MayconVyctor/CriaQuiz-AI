@@ -1,3 +1,4 @@
+package com.criaquiz.backend.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -5,31 +6,40 @@ import lombok.Data;
 import java.time.LocalDateTime;
 import java.util.List;
 
-
 @Data
 @Entity
-@Table(name = "materiais")
-public class Material {
+@Table(name = "quizzes")
+public class Quiz {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @NotBlank
-    private String titulo;
+    private String tema;
 
-    @Column(columnDefinition = "TEXT")
-    private String conteudo;
-
-    @Column(name = "arquivo_nome")
-    private String arquivoNome;
+    @Column(name = "quantidade_perguntas")
+    private Integer quantidadePerguntas;
 
     @Column(name = "criado_em")
     private LocalDateTime criadoEm;
 
+
     @ManyToOne
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
+
+
+    @ManyToOne
+    @JoinColumn(name = "material_id", nullable = true)
+    private Material material;
+
+
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
+    private List<Pergunta> perguntas;
+
+    @OneToMany(mappedBy = "quiz", cascade = CascadeType.ALL)
+    private List<Resultado> resultados;
 
     @PrePersist
     public void prePersist() {
