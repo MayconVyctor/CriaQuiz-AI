@@ -32,6 +32,9 @@ public class Material {
     @JoinColumn(name = "usuario_id", nullable = false)
     private Usuario usuario;
 
+    @OneToMany(mappedBy = "material", cascade = CascadeType.ALL)
+    private List<Quiz> quizzes;
+
     @PrePersist
     public void prePersist() {
         this.criadoEm = LocalDateTime.now();
