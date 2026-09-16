@@ -16,7 +16,7 @@ Plataforma web de geração de quizzes personalizados com inteligência artifici
 - API da Anthropic (geração de perguntas com IA)
 
 **Frontend**
-- React com TypeScript (em desenvolvimento)
+- Angular com TypeScript (em desenvolvimento)
 
 **Infraestrutura**
 - Docker e Docker Compose
