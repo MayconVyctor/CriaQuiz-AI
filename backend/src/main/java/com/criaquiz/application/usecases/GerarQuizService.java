@@ -15,7 +15,7 @@ public class GerarQuizService implements GerarQuizUseCase {
     }
 
    @Override
-    public Quiz gerarQuiz(String tema) {
+    public Quiz gerarQuiz(String tema, String texto, int quantidadePerguntas) {
         Quiz novoQuiz = new Quiz(null, "Quiz sobre " + tema, tema, 
             new ArrayList<Pergunta>());
         
