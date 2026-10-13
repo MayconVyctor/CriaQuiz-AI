@@ -4,9 +4,9 @@ import java.util.List;
 
 public class Quiz {
 
-    private long id;
+    private Long id;
 
-    private String texto;
+    private String titulo;
 
     private String tema;
 
@@ -16,19 +16,19 @@ public class Quiz {
 
     }
 
-    public Quiz(Long id, String texto, String tema, List<Pergunta> perguntas) {
+    public Quiz(Long id, String titulo, String tema, List<Pergunta> perguntas) {
         this.id = id;
-        this.texto = texto;
+        this.titulo = titulo;
         this.tema = tema;
         this.perguntas = perguntas;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public String getTexto() {
-        return texto;
+    public String getTitulo() {
+        return titulo;
     }
 
     public String getTema() {
