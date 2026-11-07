@@ -1,4 +1,4 @@
-# CriaQuiz SaaS
+# CriaQuiz 
 
 Plataforma para geracao automatizada de quizzes educacionais com Inteligencia Artificial. O sistema permite criar avaliacoes e perguntas de multipla escolha a partir de temas livres ou textos base, gerando enunciados, alternativas, gabarito e explicacoes pedagogicas.
 
